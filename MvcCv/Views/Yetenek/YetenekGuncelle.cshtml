@@ -1,0 +1,16 @@
+﻿@model MvcCv.Models.Entity.TBLYETENEKLER
+
+@{
+    ViewBag.Title = "YetenekGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Yetenek Güncelleme Sayfası</h2>
+
+<form method="post">
+
+    @Html.Label("Yetenek Açıklama")
+    @Html.TextBoxFor(x => x.Yetenek, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>

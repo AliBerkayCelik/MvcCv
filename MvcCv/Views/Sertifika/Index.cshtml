@@ -1,0 +1,92 @@
+﻿@using MvcCv.Models.Entity
+@model List<TBLSERTIFIKA>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <br />
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- /.col -->
+                <h3>Sertifikalar Listesi</h3>
+                <br />
+                <br />
+                <div class="col-md-12">
+                    <div class="card">
+
+                        <div class="card-body">
+
+                            <div class="tab-pane" id="timeline">
+                                <!-- The timeline -->
+                                <div class="timeline timeline-inverse">
+                                    <!-- timeline time label -->
+                                    @foreach (var x in Model)
+                                    {
+
+
+
+                                        <div class="time-label">
+                                            @if (int.Parse(x.Tarih.Substring(6,4)) % 2 == 0)
+                                            {
+                                                <span class="bg-success">
+                                                    @x.Tarih
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span class="bg-primary">
+                                                    @x.Tarih
+                                                </span>
+                                            }
+
+                                        </div>
+                                        <div>
+                                            @if (int.Parse(x.Tarih.Substring(6, 4)) % 2 == 0)
+                                            {
+                                                <i class="fas fa-check bg-success"></i>
+                                            }
+                                            else
+                                            {
+                                                <i class="fas fa-check bg-primary"></i>
+                                            }
+
+                                            <div class="timeline-item">
+
+
+                                                <div class="timeline-body">
+                                                    @x.Aciklama
+                                                </div>
+                                                <div class="timeline-footer">
+                                                    <a href="/Sertifika/SertifikaGuncelle/@x.ID" class="btn btn-primary btn-sm">Düzenle</a>
+                                                    <a href="/Sertifika/SertifikaSil/@x.ID" class="btn btn-danger btn-sm">Sil</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+
+                                    <!-- /.timeline-label -->
+                                    <!-- timeline item -->
+
+
+                                </div>
+                                <a href="/Sertifika/YeniSertifika" class="btn btn-info">Sertifika Ekle</a>
+                            </div>
+                        </div>
+
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+</body>
+</html>
+

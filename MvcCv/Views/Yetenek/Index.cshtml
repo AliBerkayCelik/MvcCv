@@ -1,0 +1,62 @@
+﻿@using MvcCv.Models.Entity
+@model List<TBLYETENEKLER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <br />
+                        <h3>Yetenek Listem</h3>
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10px">ID</th>
+                                            <th>Yetenek</th>
+                                            <th>Sil</th>
+                                            <th>Düzenle</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var x in Model)
+                                        {
+                                            <tr>
+                                                <td>@x.ID</td>
+                                                <td>@x.Yetenek</td>
+                                               <td><a href="/Yetenek/YetenekSil/@x.ID" class="btn btn-danger">Sil</a></td>
+                                               <td><a href="/Yetenek/YetenekGuncelle/@x.ID" class="btn btn-warning">Düzenle</a></td>
+
+                                            </tr>
+                                        }
+
+
+                                    </tbody>
+
+                                </table>
+                                <br />
+                                <a class="btn btn-info" href="/Yetenek/YeniYetenek">Yetenek Ekle</a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+</body>
+</html>
+

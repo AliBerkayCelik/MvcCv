@@ -1,0 +1,26 @@
+﻿@model MvcCv.Models.Entity.TBLSERTIFIKA
+@{
+    ViewBag.Title = "YeniSertifika";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Sertifika Ekleme Sayfası</h2>
+
+<form method="post">
+
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+   
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.Label("Sertifika Linki")
+    @Html.TextBoxFor(x => x.SertikaLink, new { @class = "form-control" })
+    <br />
+  
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+   
+</form>
+
