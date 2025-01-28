@@ -18,7 +18,7 @@ Bu teknolojilerle modern ve kullanıcı dostu bir arayüz tasarımlanmış ve mo
 ## Proje Yapısı
 Proje iki ana panelden oluşmaktadır:
 
-- Default Panel
+- Vitrin Paneli
 
 Kullanıcının eğitim bilgileri, iş deneyimleri, yetenekleri, projeleri ve iletişim formu gibi bölümleri içermektedir.
 
