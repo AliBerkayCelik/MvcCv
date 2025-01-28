@@ -54,7 +54,8 @@ HTML, CSS, Bootstrap, JavaScript
 Bu yapıyla proje, hem teknik hem de tasarım açısından modern bir kişisel CV sitesi olarak geliştirilmiştir.
 
 ## Görseller
-![cv1](https://github.com/user-attachments/assets/f67fedf1-0bee-47ff-9a84-5437a45385b8)
+
+![cv0](https://github.com/user-attachments/assets/f1cb3f9f-8355-4f25-963c-3950a5d7765d)
 
 ![cv2](https://github.com/user-attachments/assets/079d6560-7d78-402d-bd48-bba2f5039212)
 
